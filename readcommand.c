@@ -14,7 +14,7 @@ char *read_cmd(void)
 	if (isatty(0))
 		write(1, "cisfun$ ", 8);
 
-	num_read = _getline(&command, &n, stdin);
+	num_read = getline(&command, &n, stdin);
 	if (num_read == -1)
 	{
 		free(command);
