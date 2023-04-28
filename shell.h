@@ -12,7 +12,6 @@
 #include <sys/wait.h>
 #include <errno.h>
 
-extern char **environ;
 
 char *read_cmd(void);
 char **parse_cmd(char *command);
@@ -30,5 +29,6 @@ size_t _strncmp(char *s1, char *s2, size_t n);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *_strtok(char *str, const char *delim);
 char *realloc_buffer(char *buf, size_t *n);
+extern char **environ;
 
 #endif /* shell.h */

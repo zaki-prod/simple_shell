@@ -8,7 +8,7 @@
  * @env: environment variables
  * Return: 0
  */
-int main(int argc, char **argv, char **env)
+int main(int argc, char *argv[], char *env[])
 {
 	char *readcommand = NULL, **arr_cmd = NULL;
 	int pathvalue = 0, Exit = 0, v = 0;
