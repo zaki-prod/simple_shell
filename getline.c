@@ -8,12 +8,11 @@
  */
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 {
-	ssize_t r_count= 1, r_total_count = 0;
+	ssize_t r_count = 1, r_total_count = 0;
 	char *buf, *mov_buf, *end_buf;
 
 	if (!lineptr || !n || !stream)
 		return (-1);
-	fflush(stdout);
 	if (*lineptr == NULL && *n == 0)
 	{
 		*n = NUMBER;
@@ -45,8 +44,7 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 		}
 		mov_buf++;
 	}
-	mov_buf++;
-	*mov_buf = '\0';
+	*(++mov_buf) = '\0';
 	*lineptr = buf;
 	return (r_total_count);
 }
